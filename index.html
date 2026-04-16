@@ -1,636 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Свадьба Аргишта и Анны | 15.08.2026</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Аргишт & Анна — Свадьба</title>
 
-        :root {
-            --primary-color: #f8e1e7;
-            --secondary-color: #d4a5a5;
-            --accent-color: #8b5a5a;
-            --text-color: #333;
-            --white: #ffffff;
-            --gold: #d4af37;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--primary-color);
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #F5F1E8;
+    background: #0b0b0b;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+    url('YOUR_PHOTO_HERE.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-        /* Header Styles */
-        header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://static.mashagpt.ru/dl/mashagpt/rzhwm1dfj37ixi6x3yuofzql.webp');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
-            position: relative;
-        }
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    letter-spacing: 4px;
+    margin: 0;
+}
 
-        .header-content {
-            padding: 2rem;
-            background: rgba(139, 90, 90, 0.8);
-            border-radius: 15px;
-            backdrop-filter: blur(5px);
-        }
+.date {
+    margin-top: 20px;
+    letter-spacing: 6px;
+    font-size: 18px;
+}
 
-        .names {
-            font-size: 4rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
 
-        .ampersand {
-            font-size: 3rem;
-            color: var(--gold);
-            margin: 0 1rem;
-        }
+.line {
+    width: 60px;
+    height: 1px;
+    background: #F5F1E8;
+    margin: 30px auto;
+}
 
-        .date {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            font-style: italic;
-        }
+.button {
+    margin-top: 30px;
+    padding: 12px 28px;
+    border: 1px solid #F5F1E8;
+    background: transparent;
+    color: #F5F1E8;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-        .location {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .scroll-down {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-        }
-
-        <span style="color: hsl(var(--primary)); font-weight: 500;">@keyframes</span> bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
-            40% {transform: translateY(-20px) translateX(-50%);}
-            60% {transform: translateY(-10px) translateX(-50%);}
-        }
-
-        /* Main Content */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--accent-color);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background-color: var(--gold);
-        }
-
-        /* Love Story */
-        .love-story {
-            background-color: var(--white);
-        }
-
-        .story-content {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .story-text {
-            flex: 1;
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
-        .story-image {
-            flex: 1;
-            height: 300px;
-            background: url('https://static.mashagpt.ru/dl/mashagpt/rzhwm1dfj37ixi6x3yuofzql.webp') center/cover;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        /* Wedding Details */
-        .wedding-details {
-            background-color: var(--primary-color);
-        }
-
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .detail-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .detail-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .detail-icon {
-            font-size: 3rem;
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
-
-        .detail-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-        }
-
-        /* Program */
-        .program {
-            background-color: var(--white);
-        }
-
-        .timeline {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background-color: var(--secondary-color);
-        }
-
-        .timeline-item {
-            margin-bottom: 3rem;
-            position: relative;
-            width: 45%;
-        }
-
-        .timeline-item:nth-child(odd) {
-            margin-left: 0;
-            margin-right: auto;
-        }
-
-        .timeline-item:nth-child(even) {
-            margin-left: auto;
-            margin-right: 0;
-        }
-
-        .timeline-content {
-            background: var(--primary-color);
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .timeline-time {
-            font-weight: bold;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-
-        /* RSVP Form */
-        .rsvp {
-            background-color: var(--primary-color);
-        }
-
-        .rsvp-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--white);
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 2px solid var(--secondary-color);
-            border-radius: 5px;
-            font-size: 1rem;
-            font-family: 'Georgia', serif;
-        }
-
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background-color: var(--accent-color);
-            color: var(--white);
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            background-color: var(--secondary-color);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--accent-color);
-            color: var(--white);
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .footer-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--gold);
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-icons a {
-            color: var(--white);
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--gold);
-        }
-
-        .copyright {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* Responsive Design */
-        <span style="color: hsl(var(--primary)); font-weight: 500;">@media</span> (max-width: 768px) {
-            .names {
-                font-size: 2.5rem;
-            }
-            
-            .story-content {
-                flex-direction: column;
-            }
-            
-            .timeline::before {
-                left: 30px;
-            }
-            
-            .timeline-item {
-                width: calc(100% - 60px);
-                margin-left: 60px !important;
-                margin-right: 0 !important;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+.button:hover {
+    background: #F5F1E8;
+    color: #000;
+}
+</style>
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-content">
-            <h1 class="names">
-                Аргишт
-                <span class="ampersand">&</span>
-                Анна
-            </h1>
-            <p class="date">15 августа 2026 года</p>
-            <p class="location">
-                <i class="fas fa-map-marker-alt"></i>
-                Гостиничный комплекс "Николаевский Посад", г. Суздаль
-            </p>
-            <p>Приглашаем вас разделить с нами радость нашего союза</p>
-        </div>
-        <div class="scroll-down">
-            <i class="fas fa-chevron-down fa-2x"></i>
-        </div>
-    </header>
 
-    <!-- Love Story Section -->
-    <section class="section love-story">
-        <div class="container">
-            <h2 class="section-title">Наша история</h2>
-            <div class="story-content">
-                <div class="story-text">
-                    <p>Наша встреча была подобна чуду - две души, нашедшие друг друга среди миллионов. Каждый момент, проведенный вместе, наполнен теплом, пониманием и бесконечной любовью.</p>
-                    <p>Мы прошли через многое, чтобы оказаться здесь, в этот особенный день. Наша любовь росла и крепла с каждым днем, превращаясь в нечто прекрасное и вечное.</p>
-                    <p>Теперь мы готовы сделать следующий шаг и приглашаем вас стать свидетелями начала нашей новой жизни вместе.</p>
-                </div>
-                <div class="story-image"></div>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+    <div>
+        <h1>АРГИШТ & АННА</h1>
+        <div class="date">15 АВГУСТА 2026</div>
+    </div>
+</section>
 
-    <!-- Wedding Details Section -->
-    <section class="section wedding-details">
-        <div class="container">
-            <h2 class="section-title">Детали свадьбы</h2>
-            <div class="details-grid">
-                <div class="detail-card">
-                    <div class="detail-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3 class="detail-title">Дата и время</h3>
-                    <p>15 августа 2026 года</p>
-                    <p>Церемония: 16:00</p>
-                    <p>Банкет: 18:00</p>
-                </div>
-                
-                <div class="detail-card">
-                    <div class="detail-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3 class="detail-title">Место проведения</h3>
-                    <p>Гостиничный комплекс "Николаевский Посад"</p>
-                    <p>г. Суздаль, Владимирская область</p>
-                    <p>Тел: +7 (49231) 2-00-00</p>
-                </div>
-                
-                <div class="detail-card">
-                    <div class="detail-icon">
-                        <i class="fas fa-ring"></i>
-                    </div>
-                    <h3 class="detail-title">Дресс-код</h3>
-                    <p>Вечерние наряды</p>
-                    <p>Цветовая палитра: пастельные тона, золото, бордовый</p>
-                    <p>Свадебная тематика: классическая элегантность</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section">
+    <div class="line"></div>
+    <p>Приглашаем вас разделить с нами радость нашего свадебного дня</p>
+</section>
 
-    <!-- Program Section -->
-    <section class="section program">
-        <div class="container">
-            <h2 class="section-title">Программа дня</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-time">15:30 - 16:00</div>
-                        <h3>Сбор гостей</h3>
-                        <p>Встреча гостей, фотосессия, welcome-коктейль</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-time">16:00 - 17:00</div>
-                        <h3>Церемония бракосочетания</h3>
-                        <p>Торжественная церемония в беседке у озера</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-time">17:00 - 18:00</div>
-                        <h3>Фотосессия</h3>
-                        <p>Свадебная фотосессия с гостями в парке комплекса</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-time">18:00 - 19:00</div>
-                        <h3>Банкет</h3>
-                        <p>Торжественный ужин в банкетном зале</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-time">19:00 - 22:00</div>
-                        <h3>Развлекательная программа</h3>
-                        <p>Танцы, конкурсы, выступления артистов</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-time">22:00 - 23:00</div>
-                        <h3>Завершение вечера</h3>
-                        <p>Фейерверк, прощание с гостями</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section">
+    <h2>Место проведения</h2>
+    <div class="line"></div>
+    <p>г. Суздаль<br>
+    ГК «Николаевский Посад»<br>
+    ул. Ленина, д. 138</p>
+</section>
 
-    <!-- RSVP Section -->
-    <section class="section rsvp">
-        <div class="container">
-            <h2 class="section-title">Подтвердите участие</h2>
-            <div class="rsvp-form">
-                <form id="weddingForm">
-                    <div class="form-group">
-                        <label for="name">ФИО *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Телефон</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="guests">Количество гостей *</label>
-                        <select id="guests" name="guests" required>
-                            <option value="1">1 человек</option>
-                            <option value="2">2 человека</option>
-                            <option value="3">3 человека</option>
-                            <option value="4">4 человека</option>
-                            <option value="5+">5 и более</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="attendance">Присутствие *</label>
-                        <select id="attendance" name="attendance" required>
-                            <option value="yes">С радостью приду!</option>
-                            <option value="no">К сожалению, не смогу</option>
-                            <option value="maybe">Пока не уверен(а)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Пожелания / Особые пожелания</label>
-                        <textarea id="message" name="message" placeholder="Ваши пожелания молодоженам..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Отправить ответ</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<section class="section">
+    <h2>Подтверждение</h2>
+    <div class="line"></div>
+    <a href="#" class="button">Подтвердить присутствие</a>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-title">Контакты</h3>
-                    <p>Аргишт: +7 (XXX) XXX-XX-XX</p>
-                    <p>Анна: +7 (XXX) XXX-XX-XX</p>
-                    <p>wedding@argisht-anna.ru</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Как добраться</h3>
-                    <p>г. Суздаль, ул. Кремлевская, 10</p>
-                    <p>Гостиничный комплекс "Николаевский Посад"</p>
-                    <p>Парковка для гостей предусмотрена</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Следите за нами</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-vk"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>© 2026 Свадьба Аргишта и Анны. Все права защищены.</p>
-                <p>С любовью создано для самого важного дня в нашей жизни</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Form submission handling
-        document.getElementById('weddingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // In a real scenario, you would send this data to a server
-            // For now, we'll just show a success message
-            alert('Спасибо! Ваш ответ успешно отправлен. Мы с нетерпением ждем встречи с вами!');
-            
-            // Reset form
-            this.reset();
-        });
-        
-        // Smooth scrolling
-        document.querySelector('.scroll-down').addEventListener('click', function() {
-            window.scrollTo({
-                top: window.innerHeight,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Add animation to timeline items on scroll
-        const observerOptions = {
-            threshold: 0.1
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe timeline items
-        document.querySelectorAll('.timeline-item').forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(20px)';
-            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(item);
-        });
-    </script>
 </body>
 </html>
